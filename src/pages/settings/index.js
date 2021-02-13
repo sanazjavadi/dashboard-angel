@@ -4,9 +4,9 @@ import React from 'react'
     
 
     return (
-        <>
-            setting
-        </>
+        <div>
+                  <h3 className="title text-right"> تنظیمات</h3>
+        </div>
     )
 }
 

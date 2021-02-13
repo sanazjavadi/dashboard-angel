@@ -5,6 +5,7 @@ import React from 'react'
 
     return (
       <>
+        <h3 className="title text-right"> اضافه کردن آرزو جدید</h3>
       </>
     )
 }

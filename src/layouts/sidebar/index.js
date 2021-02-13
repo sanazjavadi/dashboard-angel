@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Links } from '../../constans/data'
+
+//components
+import Input from '../../component/Input'
 
 //styles
 import styles from './styles/sidebar.module.scss'
@@ -9,7 +12,6 @@ import styles from './styles/sidebar.module.scss'
 
 function Sidebar(props) {
 
-const location = useLocation()
 const [active, setActive]= useState('/')
     return (
 

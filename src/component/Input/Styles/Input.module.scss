@@ -1,0 +1,71 @@
+@import '../../../design/index.scss';
+
+.wrapper-input {
+    position: relative;
+  }
+  .form-control {
+    font-family: 'Samim';
+    padding: $size-input-padding;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    color: $input-font-color;
+    background-color: #fff;
+    border: $size-input-border solid $input-border-color;
+    font-weight: $input-font-weight;
+    will-change: border-color, box-shadow;
+    border-radius: $size-input-border-radius;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+  
+    box-shadow: none;
+    transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
+      border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+    &:focus {
+      outline: none;
+      appearance: none;
+      border: $size-input-border solid darken($input-border-color, 20px);
+    }
+  }
+  .form-control-sm {
+    padding: $size-input-padding-vertical/2 $size-input-padding-horizontal/2;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    width: 8rem;
+    color: $input-font-color;
+    background-color: #fff;
+    border: $size-input-border solid $input-border-color;
+    font-weight: $input-font-weight;
+    will-change: border-color, box-shadow;
+    border-radius: $size-input-border-radius;
+    box-shadow: none;
+    transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
+      border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+    &:focus {
+      outline: none;
+      appearance: none;
+      border: $size-input-border solid darken($input-border-color, 20px);
+    }
+  }
+  .isvalid {
+    border-color: $input-valid-color;
+    &:focus {
+      border: $size-input-border solid darken($input-valid-color, 10px);
+    }
+  }
+  .isinvalid {
+    border-color: $input-error-color;
+    &:focus {
+      border: $size-input-border solid darken($input-error-color, 10px);
+    }
+  }
+  .leftIcon {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    i {
+      color: $light-blue;
+      cursor: pointer;
+      z-index: 20;
+    }
+  }

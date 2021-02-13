@@ -1,0 +1,22 @@
+@import '../../../design/index.scss';
+
+.progress {
+    height: 10px;
+    width: 150px;
+    background-color: lightgray;
+    border-radius: 20px;
+  }
+  
+  .progress-done {
+    height: 100%;
+    width: 0;
+    font-size: 9px;
+    background: linear-gradient(to left, #f2709c,#ff9472);
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+    transition: 1s ease;
+  }
