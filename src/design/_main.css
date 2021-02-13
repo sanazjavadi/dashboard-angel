@@ -1,0 +1,23 @@
+
+.container-fluid {
+    padding: 0 !important;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: white;
+    direction: rtl;
+    
+  }
+  .app{
+    overflow-x: hidden !important;
+    font-family: 'Samim';
+  }
+
+  .modal-content{
+    border:none !important;
+}

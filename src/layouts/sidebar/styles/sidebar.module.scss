@@ -4,6 +4,7 @@
     list-style-type: none;
     li{
        a{
+           @extend %font-content;
         color:$dark-gray;
         font-size: 1rem;
         text-decoration: none;

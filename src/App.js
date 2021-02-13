@@ -10,6 +10,7 @@ import Dreams from './pages/dreams'
 
 
 //styles
+import './design/index.scss'
 import { Row, Container, Col } from 'react-bootstrap'
 
 function App() {

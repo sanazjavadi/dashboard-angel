@@ -3,6 +3,7 @@
 
 .dreams-status{
     div{
+        font-family: 'Samim';
         cursor: pointer;
         width: 200px;
         height: 160px;
@@ -15,14 +16,17 @@
         justify-content: center;
         font-size: 18px;
         &:nth-child(2){
+            font-family: 'Samim';
             background-color: #ccf2f4;
             color: $dark-blue;
         }
         &:nth-child(3){
+            font-family: 'Samim';
             background-color:#ffdcdc;
             color: #ff9292;
         }
         span{
+            font-family: 'Samim';
             font-size: 40px;
             font-weight: 900;
         }

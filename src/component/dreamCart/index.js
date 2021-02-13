@@ -3,11 +3,11 @@ import React from 'react'
 //styles
 import styles from './styles/dreamCart.module.scss'
 
- function DreamCart(props) {
+ function DreamCart({name, dream, img, title, theme}) {
     
 
     return (
-        <div className={`${styles.dream} d-flex align-items-center justify-content-around py-2 mb-1`}>
+        <div className={`${styles[`dream-${theme}`]} py-2 mb-3`}>
         <progress id="file" max="100" value="70" dir="rtl"> 70% </progress>
         <span>اسکیت</span>
         <span>title</span>

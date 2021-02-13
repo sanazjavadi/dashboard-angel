@@ -10,13 +10,13 @@ function Sidebar(props) {
     return (
 
         <ul className={styles.sidebar}>
-            <li className="py-3 pr-3 pl-5">
+            <li className="py-2 pr-3 pl-5">
                 <Link to="/">
                     داشبورد
                                 </Link>
 
             </li>
-            <li className="py-3 pr-3 pl-5">
+            <li className="py-2 pr-3 pl-5">
                 <Link to="/dreams">
                     حمایت ها
 
@@ -24,7 +24,7 @@ function Sidebar(props) {
 
 
             </li>
-            <li className="py-3 pr-3 pl-5">
+            <li className="py-2 pr-3 pl-5">
                 <Link to="/add-new-dream">
                     اضافه کردن آرزو
 
@@ -32,7 +32,7 @@ function Sidebar(props) {
 
 
             </li>
-            <li className="py-3 pr-3 pl-5">
+            <li className="py-2 pr-3 pl-5">
                 <Link to="/setting">
                     تنظیمات
                                 </Link>

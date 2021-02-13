@@ -1,0 +1,64 @@
+// ===
+// Base element styles
+// ===
+
+a,
+a:visited {
+  color: darken($dark-blue, 10px);
+}
+
+h1 {
+  @extend %typography-xxlarge;
+}
+
+h2 {
+  @extend %typography-xlarge;
+}
+
+h3 {
+  @extend %typography-large;
+}
+
+h4 {
+  @extend %typography-medium;
+}
+
+h5,
+h6 {
+  @extend %typography-small;
+}
+
+body {
+  margin: 0;
+  font-family:$system-default-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none !important;
+}
+button {
+  cursor: pointer;
+  -moz-outline: none;
+  -webkit-appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  &:focus{
+    outline: none;
+  }
+}
+
+
