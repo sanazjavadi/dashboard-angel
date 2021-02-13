@@ -1,25 +1,34 @@
+
+
+//assets
+import DashboardIcon from '../svg/Dashboard'
+import HeartIcon from '../svg/Heart'
+import GiftIcon from '../svg/Gift'
+import SettingIcon from '../svg/Setting'
+
 export const Links = [
   {
-    title: 'خانه',
+    title: 'داشبورد',
     link: '/',
+    icon:DashboardIcon
   },
   {
-    title: 'چه کارهایی میکنیم',
-    link: '/about',
+    title: 'حمایت ها',
+    link: '/dreams',
+    icon:HeartIcon
   },
   {
-    title: 'تماس با ما',
-    link: '/contact',
+    title: 'اضافه کردن آرزو',
+    link: '/add-new-dream',
+    icon:GiftIcon
   },
 
   {
-    title: 'فروشگاه مهربانی',
-    link: '/explore',
+    title: 'تنظیمات',
+    link: '/setting',
+    icon:SettingIcon
   },
-  {
-    title: 'حمایت شما',
-    link: '/your-support',
-  },
+
 ]
 
 export const Products = [

@@ -4,7 +4,8 @@
     list-style-type: none;
     li{
        a{
-           @extend %font-content;
+           font-family: 'samim';
+        @extend %font-content;
         color:$dark-gray;
         font-size: 1rem;
         text-decoration: none;
@@ -15,8 +16,22 @@
             background-color:lighten($light-gray, 15px);
             
         }
+        &:hover > svg{
+            fill:$yellow;
+        }
         &:hover > a{
             color:$yellow;
         }
+       
+    }
+    .active-link{
+        background-color:lighten($light-gray, 15px);
+        svg{
+            fill:$yellow;
+        }
+        a{
+            color:$yellow;
+        }
+      
     }
 }

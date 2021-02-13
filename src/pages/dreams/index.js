@@ -12,7 +12,7 @@ import styles from './styles/dreams.module.scss'
 
     return (
         <div>
-           <h3 className="title text-right mb-5"> آرزوها </h3>
+           <h3 className="title text-right"> آرزوها </h3>
            <div className="mb-4 d-flex justify-content-between">
                <div className={styles.list}>
              <img onClick={()=> setTheme('list')} width="20" height="20" src="https://www.flaticon.com/svg/vstatic/svg/833/833301.svg?token=exp=1613227711~hmac=731259b6b4ea6629f7d7c213619d31b4" alt=""/>
