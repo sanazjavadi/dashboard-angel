@@ -8,8 +8,14 @@ import styles from './styles/sidebar.module.scss'
     
 
     return (
-      <div className={styles.sidebar}>
-      </div>
+      
+              <ul className={styles.sidebar}>
+                            <li className="py-2 pr-3 pl-5">داشبورد</li>
+                            <li className="py-2 pr-3 pl-5"> حمایت ها</li>
+                            <li className="py-2 pr-3 pl-5"> اضافه کردن آرزو</li>
+                            <li className="py-2 pr-3 pl-5">تنظیمات</li>
+                        </ul>
+  
     )
 }
 

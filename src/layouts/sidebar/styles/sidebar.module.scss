@@ -1,1 +1,16 @@
 @import '../../../design/index.scss';
+
+.sidebar{
+    list-style-type: none;
+    li{
+       
+        color:$dark-gray;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color:lighten($light-gray, 15px);
+            color:$yellow;
+        }
+    }
+}

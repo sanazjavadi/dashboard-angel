@@ -1,0 +1,54 @@
+@import '../../../design/index.scss';
+
+
+.dreams-status{
+    div{
+        cursor: pointer;
+        width: 200px;
+        height: 160px;
+        border-radius: 10px;
+        background-color: lighten($yellow, 25px);
+        color:$yellow;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        &:nth-child(2){
+            background-color: #ccf2f4;
+            color: $dark-blue;
+        }
+        &:nth-child(3){
+            background-color:#ffdcdc;
+            color: #ff9292;
+        }
+        span{
+            font-size: 40px;
+            font-weight: 900;
+        }
+    }
+}
+
+.chart {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid $light-blue;
+}
+.lastDreams{
+    div{
+        border:1px solid $light-gray;
+        border-radius: 10px;
+        cursor: pointer;
+        color: $dark-gray;
+        &:hover{
+            background-color:lighten($light-gray, 15px);
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border:5px solid white;
+        }
+    }
+}

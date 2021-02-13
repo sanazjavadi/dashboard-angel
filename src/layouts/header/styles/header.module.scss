@@ -1,0 +1,12 @@
+@import '../../../design/index.scss';
+
+
+header{
+    border-bottom: 1px solid $light-gray;
+}
+.avatar{
+img{
+   width: 30px;
+   height: 30px;
+}
+}
