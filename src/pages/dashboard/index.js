@@ -8,15 +8,21 @@ function Dashboard() {
 
     return (
         <>
-            <h3 className="title text-right"> داشبورد </h3>
+             <h3 className="title text-right"> داشبورد </h3>
             <div className={`d-flex justify-content-between mb-5 ${styles['dreams-status']}`}>
-                <div>
-                    <span>۲۱</span>
-                    <div>آرزو</div>
-                    <span>۱۰ </span>
-                    <div>  آرزوی برآورده شده</div>
-                    <span>۵ </span>
-                </div>آرزوی برآورده نشده</div>
+                            <div>
+
+                                <span>۲۱</span>
+                                 آرزو</div>
+                            <div>
+
+                                <span>۱۰ </span>
+                                آرزوی برآورده شده</div>
+                            <div>
+
+                                <span>۵ </span>
+                                آرزوی برآورده نشده</div>
+                        </div>
 
             <div className={styles.chart}>
             </div>

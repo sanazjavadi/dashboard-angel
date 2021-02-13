@@ -1,0 +1,19 @@
+@import '../../../design/index.scss';
+
+.dream{
+    
+        border:1px solid $light-gray;
+        border-radius: 10px;
+        cursor: pointer;
+        color: $dark-gray;
+        &:hover{
+            background-color:lighten($light-gray, 15px);
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border:5px solid white;
+        }
+    
+}

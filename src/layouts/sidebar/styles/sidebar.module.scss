@@ -3,13 +3,18 @@
 .sidebar{
     list-style-type: none;
     li{
-       
+       a{
         color:$dark-gray;
         font-size: 1rem;
-        border-radius: 10px;
-        cursor: pointer;
+        text-decoration: none;
+       }
+       border-radius: 10px;
+       cursor: pointer;
         &:hover{
             background-color:lighten($light-gray, 15px);
+            
+        }
+        &:hover > a{
             color:$yellow;
         }
     }
