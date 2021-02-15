@@ -14,7 +14,7 @@ function Setting(props) {
     <div>
       <h3 className="title text-right"> تنظیمات</h3>
       <form className="mx-auto d-flex flex-wrap">
-        <div className={`${styles.rightForm} d-flex flex-column align-items-center mt-3`}>
+        <div className={`${styles.rightForm} d-flex flex-column align-items-center`}>
 
         
           <Upload />
@@ -26,7 +26,7 @@ function Setting(props) {
           </div>
         </div>
         <div className={styles.rightForm}>
-          <div className={`${styles['input-area']} mt-2`}>
+          <div className={`${styles['input-area']}`}>
             <Input placeholder="نام سازمان*" />
           </div>
           <div className={`${styles['input-area']} mt-2`}>

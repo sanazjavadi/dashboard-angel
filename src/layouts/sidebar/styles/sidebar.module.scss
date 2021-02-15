@@ -13,24 +13,24 @@
        border-radius: 10px;
        cursor: pointer;
         &:hover{
-            background-color:lighten($light-gray, 15px);
+            background-color:$light-blue;
             
         }
         &:hover > svg{
-            fill:$yellow;
+            fill:$dark-blue;
         }
         &:hover > a{
-            color:$yellow;
+            color:$dark-blue;
         }
        
     }
     .active-link{
-        background-color:lighten($light-gray, 15px);
+        background-color:$light-blue;
         svg{
-            fill:$yellow;
+            fill:$dark-blue;
         }
         a{
-            color:$yellow;
+            color:$dark-blue;
         }
       
     }

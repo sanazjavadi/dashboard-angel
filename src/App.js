@@ -15,7 +15,7 @@ import { Row, Container, Col } from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="App">
+    <div className="mb-3">
       <Router>
         <Header />
         <Container className="pt-5">

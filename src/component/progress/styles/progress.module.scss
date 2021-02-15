@@ -17,11 +17,11 @@
   .progress-done {
     height: 100%;
     width: 0;
-    background: linear-gradient(to left, #f2709c,#ff9472);
+    background: linear-gradient(to left, $dark-blue,$dark-blue);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  
     transition: 1s ease;
   }

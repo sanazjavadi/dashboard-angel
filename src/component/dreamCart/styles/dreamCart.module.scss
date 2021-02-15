@@ -9,6 +9,10 @@
         cursor: pointer;
         width: 100%;
         color: $dark-gray;
+      span{
+          min-width: 70px;
+          text-align: right;
+      }
         &:hover{
             background-color:lighten($light-gray, 15px);
         }

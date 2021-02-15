@@ -15,29 +15,29 @@ function AddDreams(props) {
 
       <form action="" className="d-flex ">
         <div className="w-50">
-<UploadImage/>
-      
+          <UploadImage />
+
         </div>
         <div className="w-50">
-        <div className="w-100">
-          <Input placeholder="نام" />
+          <div className="w-100">
+            <Input placeholder="نام" />
+          </div>
+          <div className="mt-2 w-100">
+            <Input placeholder="توضیحات" />
+          </div>
+          <div className="mt-2 w-100">
+            <Input placeholder="موضوع" />
+          </div>
+          <div className="mt-2 w-100">
+            <Input placeholder="مبلغ مورد نیاز" type="number" />
+          </div>
+          <div className="mt-2">
+            <Button size="block" theme="lightbtn">
+              اضافه کردن آرزو
+           </Button>
+          </div>
         </div>
-        <div className="mt-2 w-100">
-          <Input placeholder="توضیحات" />
-        </div>
-        <div className="mt-2 w-100">
-          <Input placeholder="موضوع" />
-        </div>
-        <div className="mt-2 w-100">
-          <Input placeholder="مبلغ مورد نیاز" type="number" />
-        </div>
-      <div className="mt-2">
-    <Button size="block" theme="lightbtn">
-      اضافه کردن آرزو
-    </Button>
-  </div>
-        </div>
-     
+
       </form>
     </>
   )
