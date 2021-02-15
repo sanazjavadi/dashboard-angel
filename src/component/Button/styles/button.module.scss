@@ -1,0 +1,42 @@
+@import '../../../design/index.scss';
+
+.btn {
+    font-family: 'Samim';
+      font-weight: $butten-font-weight;
+      min-width: 150px;
+      border: $size-button-border solid transparent;
+      padding: $size-button-padding;
+      font-size: $button-font-size;
+      height: 50px;
+      line-height: $button-line-height;
+      border-radius: $size-button-border-radius;
+      transition: all 0.5s linear;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+    .darkbtn {
+      @extend .btn;
+      color: white;
+      background-color: $dark-blue;
+      &:hover {
+        background: darken($dark-blue, 7px);
+      }
+    }
+    .lightbtn {
+      @extend .btn;
+      color: $dark-blue;
+      background-color: $light-blue;
+      &:hover {
+        background: darken($light-blue, 7px);
+      }
+    }
+    .btn-lg {
+      @extend .btn;
+      padding: 0 1.5rem;
+    }
+    .btn-block {
+      @extend .btn;
+      width: 100%;
+    }

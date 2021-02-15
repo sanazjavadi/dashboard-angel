@@ -1,0 +1,19 @@
+@import '../../../design/index.scss';
+
+
+.uploadArea{
+    width:100%;
+    max-width: 300px;
+    height:200px;
+    border:2px dashed $light-blue;
+    border-radius:10px;
+    color:$light-blue;
+    background-color: lighten($light-blue, 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 12px;
+    cursor: pointer;
+  }

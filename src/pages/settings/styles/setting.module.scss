@@ -1,0 +1,64 @@
+@import '../../../design/index.scss';
+
+.rightForm{
+    width: 50%;
+    @media (max-width:1000px){
+       width: 70%;
+       margin-left:auto ;
+       margin-right: auto;
+    }
+    @media (max-width:700px){
+     width: 100%;
+     margin-left:auto ;
+     margin-right: auto;
+  }
+}
+
+ .form-control {
+     direction: rtl;
+     width: 100%;
+     padding:10px;
+     font-size: $input-font-size;
+     line-height: $input-line-height;
+     color: $input-font-color;
+     background-color: #fff;
+     border: $size-input-border solid $input-border-color;
+     font-weight: $input-font-weight;
+     will-change: border-color, box-shadow;
+     border-radius: $size-input-border-radius;
+     resize: none;
+     box-shadow: none;
+     transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06), border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+     &:focus {
+       outline: none;
+       appearance: none;
+       border: $size-input-border solid darken($input-border-color, 20px);
+     }
+     &::placeholder{
+         direction: rtl;
+         padding: 0;
+     }
+   }
+   .uploadArea{
+     width:300px;
+     height:200px;
+     border:2px dashed $light-blue;
+     border-radius:10px;
+     color:$light-blue;
+     background-color: lighten($light-blue, 10px);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     font-weight: 900;
+     font-size: 12px;
+     cursor: pointer;
+   }
+
+
+.input-area{
+ width: 100%;
+}
+.text-area{
+ width: 100%;
+}

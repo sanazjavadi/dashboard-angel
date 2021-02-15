@@ -1,7 +1,14 @@
 @import '../../../design/index.scss';
 
+
+.progress-wrapper{
+    span{
+        font-size: 10px;
+        color:$pink;
+    }
+}
 .progress {
-    height: 10px;
+    height: 7px;
     width: 150px;
     background-color: lightgray;
     border-radius: 20px;
@@ -10,9 +17,7 @@
   .progress-done {
     height: 100%;
     width: 0;
-    font-size: 9px;
     background: linear-gradient(to left, #f2709c,#ff9472);
-    color: #fff;
     border-radius: 20px;
     display: flex;
     justify-content: center;
