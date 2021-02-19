@@ -17,9 +17,9 @@ const [active, setActive]= useState('/')
 
             {
                 Links.map((link) => 
-                <li onClick={()=> setActive(link.link)} className={`py-2 pr-3 pl-5 d-flex align-items-center mb-2 justify-content-end ${ active === link.link && styles['active-link']}`}>
+                <li key={link.link} onClick={()=> setActive(link.link)} className={`py-2 pr-3 pl-5 d-flex align-items-center mb-2 justify-content-end ${ active === link.link && styles['active-link']}`}>
 
-                    <Link to={`${link.link}`}>
+                    <Link key={link.link} to={`${link.link}`}>
                         {link.title}
                     </Link>
 

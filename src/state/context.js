@@ -5,7 +5,8 @@ import { instance, USER_TOKEN } from '../service/api'
 
 const initialState = {
     dreams: Products,
-    loading: false
+    loading: false,
+    currentDream: {}
 }
 
 const AppContext = createContext(initialState);
@@ -70,9 +71,25 @@ const AppProvider = ({ children }) => {
                 dispatch({ type: 'CREATE_DREAM_REJECT', error: err || err.response })
             })
     }
-
+    const getDream = (dreamId) => {
+        dispatch({ type: 'GET_DREAM_REQUEST' })
+        instance
+            .get(`v1/user/${USER_TOKEN}/dream/${dreamId}`)
+            .then(res => {
+                console.log(res.data.data)
+                dispatch({ type: 'GET_DREAM_SUCCESS', dream: res.data })
+            })
+            .catch(err => {
+                console.log(err || err.response)
+                dispatch({ type: 'GET_DREAM_REJECT', error: err || err.response })
+            })
+    }
     return (
-        <AppContext.Provider value={{ dreams: state.dreams, fetchDreams, editDream, removeDream, createDream }}>
+        <AppContext.Provider value={{
+            dreams: state.dreams,
+            fetchDreams, editDream, removeDream,
+            createDream, getDream, currentDream: state.currentDream
+        }}>
             {children}
         </AppContext.Provider>
     )

@@ -13,6 +13,7 @@ function Index(props) {
     align,
     handleChange,
     handleIcon,
+    handleBlur,
     error,
     icon,
   } = props
@@ -31,6 +32,7 @@ function Index(props) {
         }
         dir={align ? "ltr" : "rtl"}
         onChange={(e) => handleChange(e)}
+        handleBlur={(e)=>  handleBlur(e)}
       />
       {icon && (
         <span onClick={() => handleIcon()}>

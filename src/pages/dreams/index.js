@@ -15,7 +15,7 @@ import ListIcon from '../../svg/ListIcon'
  function Dreams(props) {
     const [theme, setTheme]= useState('list')
     const {dreams, fetchDreams } =  UseGlobalContext()
-    useEffect(()=> fetchDreams(), [dreams])
+    // useEffect(()=> fetchDreams(), [dreams])
 
     return (
         <div>
