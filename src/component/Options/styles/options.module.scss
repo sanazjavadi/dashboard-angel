@@ -1,0 +1,27 @@
+@import '../../../design/index.scss';
+
+.options{
+    background-color: $dark-blue;
+    position:absolute;
+    color:white;
+    border-radius: 10px;
+    width: 150px;
+    right:0;
+    top:20px;
+    z-index: 10;
+   
+    div{
+        &:first-child{
+            border-bottom: 1px solid lighten($dark-blue, 10px);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        &:last-child{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        &:hover{
+            background-color: lighten($dark-blue, 10px);
+        }
+    }
+}
