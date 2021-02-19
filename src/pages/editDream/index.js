@@ -11,7 +11,7 @@ import TextArea from '../../component/TextArea'
 
 function Dream(props) {
     const { id } = useParams
-    const { currentDream, getDream } = UseGlobalContext();
+    const { currentDream, getDream, editDream } = UseGlobalContext();
 
     // useEffect(() => getDream(id))
     return (
@@ -39,10 +39,7 @@ function Dream(props) {
                     return errors;
                 }}
                 onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
-                        setSubmitting(false);
-                    }, 400);
+                    editDream(values)
                 }}
             >
                 {({

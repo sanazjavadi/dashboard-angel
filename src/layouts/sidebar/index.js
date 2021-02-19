@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Links } from '../../constans/data'
 
-
 //styles
 import styles from './styles/sidebar.module.scss'
 

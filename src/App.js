@@ -5,9 +5,9 @@ import Sidebar from './layouts/sidebar'
 import Header from './layouts/header'
 import Dashboard from './pages/dashboard'
 import Setting from './pages/settings'
-import AddDreams from './pages/addDream'
+import CreateDreams from './pages/createDream'
 import Dreams from './pages/dreams'
-import Dream from './pages/dream'
+import EditDream from './pages/editDream'
 
 //styles
 import './design/index.scss'
@@ -24,10 +24,10 @@ function App() {
          
               <Switch>
                 <Route exact path="/" component={Dashboard} />
-                <Route path="/add-new-dream" component={AddDreams} />
+                <Route path="/add-new-dream" component={CreateDreams} />
                 <Route path="/dreams" component={Dreams} />
                 <Route path="/setting" component={Setting} />
-                <Route path="/dream/:id" component={Dream}/>
+                <Route path="/dream/:id" component={EditDream}/>
               </Switch>
 
             </Col>
