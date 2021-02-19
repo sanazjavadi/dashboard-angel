@@ -1,46 +1,63 @@
-
+import {
+    FETCH_DREAMS_REQUEST,
+    FETCH_DREAMS_SUCCESS,
+    FETCH_DREAMS_REJECT,
+    GET_DREAM_REQUEST,
+    GET_DREAM_SUCCESS,
+    GET_DREAM_REJECT,
+    REMOVE_DREAMS_REQUEST,
+    REMOVE_DREAMS_SUCCESS,
+    REMOVE_DREAMS_REJECT,
+    CREATE_DREAM_REQUEST,
+    CREATE_DREAM_REJECT,
+    CREATE_DREAM_SUCCESS,
+    EDIT_DREAM_REQUEST,
+    EDIT_DREAM_SUCCESS,
+    EDIT_DREMS_REJECT
+}
+    from '../../constans/actionTypes'
 
 const reducer = (state, action) => {
 
     switch (action.type) {
 
         // fetching dreams
-        case 'FETCH_DREAMS_REQUEST':
+        case FETCH_DREAMS_REQUEST:
             return { ...state, loading: true };
-        case 'FETCH_DREAMS_SUCCESS':
+        case FETCH_DREAMS_SUCCESS:
             return { ...state, loading: false, dreams: action.dreams }
-        case 'FETCH_DREAMS_REJECT':
+        case FETCH_DREAMS_REJECT:
             return { ...state, loading: false, error: action.error }
 
         //getting dream    
-        case 'GET_DREAM_REQUEST':
+        case GET_DREAM_REQUEST:
             return { ...state, loading: true }
-        case 'GET_DREAM_SUCCESS':
+        case GET_DREAM_SUCCESS:
             return { ...state, loading: false, currentDream: action.dream }
-        case 'GET_DREAM_REJECT':
+        case GET_DREAM_REJECT:
             return { ...state, loading: false, error: action.error }
-            
+
         //removing dream
-        case 'REMOVE_DREAMS_REQUEST':
+        case REMOVE_DREAMS_REQUEST:
             return { ...state, loading: true }
-        case 'REMOVE_DREAMS_SUCCESS':
+        case REMOVE_DREAMS_SUCCESS:
             const updatedDream = state.dreams.filter((dream) => dream.id !== action.dreamId)
             return { ...state, dreams: updatedDream, loading: false }
-        case 'REMOVE_DREAMS_REJECT':
+        case REMOVE_DREAMS_REJECT:
             return { ...state, loading: false, error: action.error }
-        
+
         //creating dream
-        case 'CREATE_DREAMS_REQUEST':
+        case CREATE_DREAM_REQUEST:
             return { ...state, loading: true }
-        case 'CREATE_DREAMS_SUCCESS':
+        case CREATE_DREAM_SUCCESS:
             return { ...state, loading: false, state: [...state.dreams, action.dream] }
-        case 'CREATE_DREAM_REJECT':
+        case CREATE_DREAM_REJECT:
             return { ...state, loading: false, error: action.payload }
 
         //editing dream    
-        case 'EDIT_DREAM_REQUEST':
+        case EDIT_DREAM_REQUEST:
             return { ...state, loading: true }
-        case 'EDIT_DREAM_SUCCESS':
+        case EDIT_DREAM_SUCCESS:
             const updatedDreams = state.dreams.map((dream) => {
                 if (dream.id === action.dream.id) {
                     return action.dream
@@ -50,7 +67,7 @@ const reducer = (state, action) => {
                 }
             })
             return { ...state, loading: false, state: updatedDreams }
-        case 'EDIT_DREMS_REJECT':
+        case EDIT_DREMS_REJECT:
             return { ...state, loading: false, error: action.payload }
 
         // default state
