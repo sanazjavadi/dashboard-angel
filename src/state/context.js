@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useReducer } from 'react'
 import reducer from './reducer'
+import { Products } from '../constans/data'
 import { instance, USER_TOKEN } from '../service/api'
 
 const initialState = {
-    dreams: [],
+    dreams: Products,
     loading: false
 }
 
@@ -48,26 +49,26 @@ const AppProvider = ({ children }) => {
             .delete(`/v1/user/${USER_TOKEN}/dreams/${dreamId}`)
             .then(res => {
                 console.log(res.data)
-                dispatch({type:'REMOVE_DREAMS_SUCCESS', dreamId: dreamId})
+                dispatch({ type: 'REMOVE_DREAMS_SUCCESS', dreamId: dreamId })
             })
             .catch(err => {
                 console.log(err || err.response)
-                dispatch({type:'REMOVE_DREAMS_REJECT', err: err || err.response})
+                dispatch({ type: 'REMOVE_DREAMS_REJECT', err: err || err.response })
             })
     }
 
-    const createDream = (data)=> {
-      dispatch({type:'CREATE_DREAMS_REQUEST'})
-      instance
-      .post(`v1/user/${USER_TOKEN}/dream`, data)
-      .then(res => {
-          console.log(res.data.data)
-          dispatch({type: 'CREATE_DREAMS_SUCCESS', dream: res.data.data})
-      })
-      .catch(err=> {
-          console.log(err || err.response)
-          dispatch({type: 'CREATE_DREAM_REJECT', error:err || err.response })
-      })
+    const createDream = (data) => {
+        dispatch({ type: 'CREATE_DREAMS_REQUEST' })
+        instance
+            .post(`v1/user/${USER_TOKEN}/dream`, data)
+            .then(res => {
+                console.log(res.data.data)
+                dispatch({ type: 'CREATE_DREAMS_SUCCESS', dream: res.data.data })
+            })
+            .catch(err => {
+                console.log(err || err.response)
+                dispatch({ type: 'CREATE_DREAM_REJECT', error: err || err.response })
+            })
     }
 
     return (

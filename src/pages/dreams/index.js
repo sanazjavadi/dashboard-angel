@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {Products}  from '../../constans/data'
+import React, { useEffect, useState } from 'react'
+import {UseGlobalContext} from "../../state/context";
 
 //components
 import DreamCart from '../../component/dreamCart';
@@ -14,6 +14,8 @@ import ListIcon from '../../svg/ListIcon'
 
  function Dreams(props) {
     const [theme, setTheme]= useState('list')
+    const {dreams, fetchDreams } =  UseGlobalContext()
+    useEffect(()=> fetchDreams(), [dreams])
 
     return (
         <div>
@@ -31,7 +33,7 @@ import ListIcon from '../../svg/ListIcon'
            </div>
            <div className="d-flex flex-wrap justify-content-between">
            {
-                Products.map((product)=> <DreamCart theme={theme} {...product}/>)
+                dreams.map((dream)=> <DreamCart theme={theme} {...dream}/>)
             }
            </div>
            
