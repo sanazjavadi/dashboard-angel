@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
-import { UseGlobalContext } from "../../state/context";
+import { UseGlobalContext } from "../../state/dreamContext/context";
 
 //styles
 import styles from './styles/options.module.scss'

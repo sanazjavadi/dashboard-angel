@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import { Formik } from 'formik';
-import { UseGlobalContext } from '../../state/context'
+import { UseGlobalContext } from '../../state/dreamContext/context'
 
 //components
 import Input from '../../component/Input'

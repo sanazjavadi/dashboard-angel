@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react'
 import reducer from './reducer'
-import { Products } from '../constans/data'
-import { instance, USER_TOKEN } from '../service/api'
+import { Products } from '../../constans/data'
+import { instance, USER_TOKEN } from '../../service/api'
 
 const initialState = {
     dreams: Products,

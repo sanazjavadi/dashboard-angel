@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {UseGlobalContext} from "../../state/context";
+import {UseGlobalContext} from "../../state/dreamContext/context";
 
 //components
 import DreamCart from '../../component/dreamCart';
