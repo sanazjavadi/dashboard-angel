@@ -19,6 +19,7 @@ const reducer = (state, action) => {
             return { ...state, loading: false, currentDream: action.dream }
         case 'GET_DREAM_REJECT':
             return { ...state, loading: false, error: action.error }
+            
         //removing dream
         case 'REMOVE_DREAMS_REQUEST':
             return { ...state, loading: true }
