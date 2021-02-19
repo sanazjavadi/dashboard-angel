@@ -23,7 +23,7 @@ function DreamCart({ name, dream, image, title, id, theme }) {
                     showOption && <Options id={id}/>
                 }
             </div>
-
+  
             <Progress percantage="60%" />
             <span>اسکیت</span>
             <span>{name}</span>

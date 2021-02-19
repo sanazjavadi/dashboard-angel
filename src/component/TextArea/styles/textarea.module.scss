@@ -1,0 +1,27 @@
+@import '../../../design/index.scss';
+
+.form-control {
+    direction: rtl;
+    width: 100%;
+    padding:10px;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    color: $input-font-color;
+    background-color: #fff;
+    border: $size-input-border solid $input-border-color;
+    font-weight: $input-font-weight;
+    will-change: border-color, box-shadow;
+    border-radius: $size-input-border-radius;
+    resize: none;
+    box-shadow: none;
+    transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06), border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+    &:focus {
+      outline: none;
+      appearance: none;
+      border: $size-input-border solid darken($input-border-color, 20px);
+    }
+    &::placeholder{
+        direction: rtl;
+        padding: 0;
+    }
+  }

@@ -46,18 +46,7 @@
       border: $size-input-border solid darken($input-border-color, 20px);
     }
   }
-  .isvalid {
-    border-color: $input-valid-color;
-    &:focus {
-      border: $size-input-border solid darken($input-valid-color, 10px);
-    }
-  }
-  .isinvalid {
-    border-color: $input-error-color;
-    &:focus {
-      border: $size-input-border solid darken($input-error-color, 10px);
-    }
-  }
+
   .leftIcon {
     position: absolute;
     left: 1rem;
@@ -68,4 +57,7 @@
       cursor: pointer;
       z-index: 20;
     }
+  }
+  .error{
+    color:red;
   }

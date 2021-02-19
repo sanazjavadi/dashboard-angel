@@ -4,20 +4,22 @@ import React from "react";
 import Styles from "./Styles/Input.module.scss";
 
 function Index(props) {
-    const {
-        type,
-        value,
-        placeholder,
-        size,
-        align,
-        handleChange,
-        handleIcon,
-        error,
-        icon,
-      }  = props
+  const {
+    name,
+    type,
+    value,
+    placeholder,
+    size,
+    align,
+    handleChange,
+    handleIcon,
+    error,
+    icon,
+  } = props
   return (
     <div className={Styles["wrapper-input"]}>
       <input
+        name={name}
         type={type}
         value={value}
         placeholder={placeholder}
@@ -35,7 +37,7 @@ function Index(props) {
           {/* <i className="['fas', `fa-${icon}`, 'leftIcon']"></i> */}
         </span>
       )}
-      {error && <span></span>}
+      {error && <small className={`text-right w-100 d-block mt-1 mr-1 ${Styles.error}`}>{error}</small>}
     </div>
   );
 }

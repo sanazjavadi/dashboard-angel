@@ -7,7 +7,7 @@ import Dashboard from './pages/dashboard'
 import Setting from './pages/settings'
 import AddDreams from './pages/addDream'
 import Dreams from './pages/dreams'
-
+import Dream from './pages/dream'
 
 //styles
 import './design/index.scss'
@@ -27,6 +27,7 @@ function App() {
                 <Route path="/add-new-dream" component={AddDreams} />
                 <Route path="/dreams" component={Dreams} />
                 <Route path="/setting" component={Setting} />
+                <Route path="/dream/:id" component={Dream}/>
               </Switch>
 
             </Col>
