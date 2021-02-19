@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from './state/dreamContext/context'
+import { authContext } from "./state/authContext/context";
 
 ReactDOM.render(
   <React.StrictMode>
+    <authContext>
     <AppProvider>
     <App />
     </AppProvider>
+    </authContext>
   </React.StrictMode>,
   document.getElementById('root')
 );
