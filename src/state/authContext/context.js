@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useContext, useReducer, createContext } from 'react';
 import reducer from './reducer'
 import { instance, AUTH_TOKEN } from '../../service/api'
@@ -20,7 +21,7 @@ const initialState = {
     loading: false
 }
 
-const authContext = createContext(initialState);
+const AuthContext = createContext(initialState);
 
 const AuthProvider = ({ children }) => {
 
@@ -42,7 +43,7 @@ const AuthProvider = ({ children }) => {
     const logIn = (data) => {
         dispatch({ type: LOGIN_REQUEST })
         instance
-            .post('/v1/auth/register', data)
+            .post('/v1/auth/login', data)
             .then((res) => {
                 localStorage.setItem('token', res.data.token.accessToken);
                 localStorage.setItem('user', JSON.stringify(res.data.user));
@@ -59,14 +60,14 @@ const AuthProvider = ({ children }) => {
         dispatch({ type: LOGOUT })
     }
     return (
-        <authContext.provider value={{ signUp, logIn, logOut, user: state.user, loading: state.loading, error: state.error }}>
+        <AuthContext.provider value={{ signUp, logIn, logOut, user: state.user, loading: state.loading, error: state.error }}>
             {children}
-        </authContext.provider>
+        </AuthContext.provider>
     )
 }
 
-export const useAuthContext = () => {
-    return useContext(authContext)
+export const useGlobalContext = () => {
+    return useContext(AuthContext)
 }
 
-export { authContext, AuthProvider }
+export { AuthContext, AuthProvider }

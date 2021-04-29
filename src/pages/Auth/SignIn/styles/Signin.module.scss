@@ -1,0 +1,31 @@
+@import '../../../../design/index.scss';
+
+.form-card {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px 0 rgba(20, 47, 82, 0.12),
+      0 6px 14px 0 rgba(51, 118, 204, 0.06);
+    border: solid 0.5px rgba(184, 202, 224, 0.5);
+    h3 {
+      font-size: 20px;
+      color: $dark-blue;
+      line-height: 0.5rem;
+      font-weight: 700;
+    }
+  }
+.footer-form {
+    color: $dark-gray;
+    span {
+      color: $dark-blue;
+      cursor: pointer;
+    }
+    .forgotText{
+        margin:0.5rem 0;
+        font-size: 16px;
+        cursor: pointer;
+        color:$yellow;
+        text-align: center;
+        font-weight: 800;
+    }
+  }
