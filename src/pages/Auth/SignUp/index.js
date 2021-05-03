@@ -1,5 +1,5 @@
 import { Formik } from 'formik';
-import { useGlobalContext } from '../../../state/authContext/context'
+import { AuthContext } from '../../../state/authContext/context'
 
 //components
 import Input from "../../../component/Input";
@@ -7,11 +7,12 @@ import Button from "../../../component/Button";
 
 //styles
 import Styles from "./styles/SignUp.module.scss";
+import { useContext } from 'react';
 
 
 
 function Index({ changeHandler }) {
-  const { signUp } = useGlobalContext()
+  const { signUp } = useContext(AuthContext)
   return (
     <section className="mt-5 pt-5">
       <div className="container mt-5">

@@ -22,7 +22,7 @@ import {
     from '../../constans/actionTypes'
 
 const initialState = {
-    dreams: Products,
+    dreams: [],
     loading: false,
     currentDream: {}
 }
@@ -35,8 +35,9 @@ const AppProvider = ({ children }) => {
 
     const fetchDreams = () => {
         dispatch({ type: FETCH_DREAMS_REQUEST })
+        console.log(USER_TOKEN.id)
         instance
-            .get(`v1/user/${USER_TOKEN}/dreams`)
+            .get(`/v1/user/${USER_TOKEN.id}/dreams`)
             .then(res => {
                 console.log(res.data)
                 dispatch({ type: FETCH_DREAMS_SUCCESS, dreams: res.data.data })
@@ -50,7 +51,7 @@ const AppProvider = ({ children }) => {
     const editDream = (data) => {
         dispatch({ type: EDIT_DREAM_REQUEST })
         instance
-            .put(`v1/user/${USER_TOKEN}/dreams/${data.id}`, data)
+            .put(`/v1/dreams/${data.id}`, data)
             .then(res => {
                 console.log(res.data)
                 dispatch({ type: EDIT_DREAM_SUCCESS, dream: res.data.data })
@@ -65,7 +66,7 @@ const AppProvider = ({ children }) => {
     const removeDream = (dreamId) => {
         dispatch({ type: REMOVE_DREAMS_REQUEST, })
         instance
-            .delete(`/v1/user/${USER_TOKEN}/dreams/${dreamId}`)
+            .delete(`/v1/dreams/${dreamId}`)
             .then(res => {
                 console.log(res.data)
                 dispatch({ type: REMOVE_DREAMS_SUCCESS, dreamId: dreamId })
@@ -79,7 +80,7 @@ const AppProvider = ({ children }) => {
     const createDream = (data) => {
         dispatch({ type: CREATE_DREAM_REQUEST })
         instance
-            .post(`v1/user/${USER_TOKEN}/dream`, data)
+            .post(`/v1/dreams`, data)
             .then(res => {
                 console.log(res.data.data)
                 dispatch({ type: CREATE_DREAM_SUCCESS, dream: res.data.data })
@@ -92,7 +93,7 @@ const AppProvider = ({ children }) => {
     const getDream = (dreamId) => {
         dispatch({ type: GET_DREAM_REQUEST })
         instance
-            .get(`v1/user/${USER_TOKEN}/dream/${dreamId}`)
+            .get(`/v1/dreams/${dreamId}`)
             .then(res => {
                 console.log(res.data.data)
                 dispatch({ type: GET_DREAM_SUCCESS, dream: res.data })

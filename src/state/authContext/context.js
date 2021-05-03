@@ -60,9 +60,9 @@ const AuthProvider = ({ children }) => {
         dispatch({ type: LOGOUT })
     }
     return (
-        <AuthContext.provider value={{ signUp, logIn, logOut, user: state.user, loading: state.loading, error: state.error }}>
+        <AuthContext.Provider value={{ signUp, logIn, logOut, user: state.user, loading: state.loading, error: state.error }}>
             {children}
-        </AuthContext.provider>
+        </AuthContext.Provider>
     )
 }
 
